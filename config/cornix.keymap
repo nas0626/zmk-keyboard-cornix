@@ -150,6 +150,15 @@
         };
     };
 
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        bt_access {
+            if-layers = <1 2>;      // NUM と FUNC が両方有効なら
+            then-layer = <3>;       // BT レイヤーを有効化
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
